@@ -1,14 +1,14 @@
 ﻿using System;
 
-namespace Rotativa.DotNet5.Options
-{
-    class OptionFlag : Attribute
-    {
-        public string Name { get; private set; }
+namespace Rotativa.Options;
 
-        public OptionFlag(string name)
-        {
-            Name = name;
-        }
-    }
+[AttributeUsage(AttributeTargets.Property | AttributeTargets.Field)]
+internal class OptionFlag : Attribute
+{
+	public string Name { get; private set; }
+
+	public OptionFlag(string name)
+	{
+		Name = name;
+	}
 }
